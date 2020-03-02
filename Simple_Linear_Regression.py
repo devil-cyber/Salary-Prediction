@@ -21,13 +21,6 @@ from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=1/3,random_state=0)
 
 
-# In[5]:
-
-
-X_train
-
-
-# In[10]:
 
 
 from sklearn.linear_model import LinearRegression
@@ -35,19 +28,10 @@ regressor=LinearRegression()
 regressor.fit(X_train,y_train)
 
 
-# In[11]:
 
 
 y_pred=regressor.predict(X_test)
 
-
-# In[12]:
-
-
-y_pred
-
-
-# In[19]:
 
 
 plt.scatter(X_train,y_train,color='red')
@@ -58,8 +42,6 @@ plt.ylabel('salary')
 plt.show()
 
 
-# In[20]:
-
 
 plt.scatter(X_test,y_test,color='red')
 plt.plot(X_train,regressor.predict(X_train),color='blue')
@@ -68,8 +50,6 @@ plt.xlabel('Years of Experince')
 plt.ylabel('salary')
 plt.show()
 
-
-# In[ ]:
 
 
 
